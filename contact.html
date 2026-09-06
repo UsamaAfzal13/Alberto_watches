@@ -7,15 +7,15 @@
 
     <title>Contact Us - Velora Watches</title>
 
-    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style copy.css">
 
 </head>
 
 <body>
+
     <!-- TOP BAR -->
-     <div class="top-bar">
+    <div class="top-bar">
         <div class="top-bar-content">
             <span>★</span>
             <span>ENJOY UP TO 60% OFF + FREE DELIVERY ON ORDERS ABOVE RS. 2799</span>
@@ -25,9 +25,7 @@
     </div>
 
 
- 
-         <!-- NAVBAR -->
-
+    <!-- NAVBAR -->
 
     <header>
         <nav class="navbar">
@@ -97,6 +95,46 @@
 
 
     <!-- =====================================================
+         SEARCH OVERLAY - ADDED
+    ====================================================== -->
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button type="button"
+                class="search-close"
+                id="searchClose">
+                ×
+            </button>
+
+            <h2>
+                Search <span>Velora</span>
+            </h2>
+
+            <div class="search-input-wrapper">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search watches..."
+                    autocomplete="off">
+
+                <button type="button"
+                    id="searchSubmit">
+                    SEARCH
+                </button>
+
+            </div>
+
+            <div class="search-results" id="searchResults"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
          CONTACT HERO
     ====================================================== -->
 
@@ -115,18 +153,14 @@
     </section>
 
 
-    <!-- =====================================================
-         CONTACT PAGE
-    ====================================================== -->
+    <!-- CONTACT PAGE -->
 
     <section class="contact-page">
 
         <div class="contact-main">
 
 
-            <!-- =================================================
-                 CONTACT INFORMATION
-            ================================================== -->
+            <!-- CONTACT INFORMATION -->
 
             <div class="contact-info-box">
 
@@ -169,7 +203,7 @@
                         <h4>Email Address</h4>
 
                         <p>
-                            info@velorawatches.com
+                            velora-watches.com
                         </p>
                     </div>
 
@@ -188,7 +222,7 @@
                         <h4>Phone Number</h4>
 
                         <p>
-                            +92 300 1234567
+                            +92 3131097782
                         </p>
                     </div>
 
@@ -232,24 +266,21 @@
                         id="name"
                         name="name"
                         placeholder="Your Name"
-                        required
-                    >
+                        required>
 
                     <input
                         type="email"
                         id="email"
                         name="email"
                         placeholder="Your Email"
-                        required
-                    >
+                        required>
 
                     <input
                         type="text"
                         id="subject"
                         name="subject"
                         placeholder="Subject"
-                        required
-                    >
+                        required>
 
                     <textarea
                         id="message"
@@ -292,9 +323,13 @@
             <div class="location-map">
 
                 <iframe
-                    src="https://www.google.com/maps?q=Karachi,Pakistan&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.2713934123685!2d67.12083307448911!3d24.820390877955504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ba09c24ad91%3A0x23320c2fdcb48428!2sAptech%20Learning%20Korangi!5e0!3m2!1sen!2s!4v1788686201871!5m2!1sen!2s"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen
                     loading="lazy"
-                    allowfullscreen>
+                    referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
 
             </div>
@@ -369,12 +404,12 @@
          JAVASCRIPT
     ====================================================== -->
 
-    
-
-
     <script>
 
-        // Live Time
+        // =====================================================
+        // LIVE TIME - FIXED
+        // =====================================================
+
         function updateTime() {
 
             const now = new Date();
@@ -386,15 +421,31 @@
             let ampm = hours >= 12 ? "PM" : "AM";
 
             hours = hours % 12;
-
             hours = hours ? hours : 12;
 
-            minutes = minutes < 10 ? "0" + minutes : minutes;
+            minutes =
+                minutes < 10
+                    ? "0" + minutes
+                    : minutes;
 
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+            seconds =
+                seconds < 10
+                    ? "0" + seconds
+                    : seconds;
 
-            document.getElementById("liveTime").textContent =
-                " | " + hours + ":" + minutes + ":" + seconds + " " + ampm;
+            const topTime =
+                document.getElementById("topTime");
+
+            if (topTime) {
+
+                topTime.textContent =
+                    hours + ":" +
+                    minutes + ":" +
+                    seconds + " " +
+                    ampm;
+
+            }
+
         }
 
         updateTime();
@@ -402,23 +453,168 @@
         setInterval(updateTime, 1000);
 
 
-        // Mobile Menu
-        const menuButton = document.getElementById("menuButton");
-        const navLinks = document.getElementById("navLinks");
+        // =====================================================
+        // MOBILE MENU - FIXED
+        // =====================================================
 
-        if (menuButton) {
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        if (menuButton && navLinks) {
 
             menuButton.addEventListener("click", function () {
 
-                navLinks.classList.toggle("show");
+                navLinks.classList.toggle("active");
 
             });
 
         }
 
 
-        // Contact Form
-        const contactForm = document.getElementById("contactForm");
+        // =====================================================
+        // SEARCH - ADDED
+        // =====================================================
+
+        const searchButton =
+            document.getElementById("searchButton");
+
+        const searchOverlay =
+            document.getElementById("searchOverlay");
+
+        const searchClose =
+            document.getElementById("searchClose");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const searchSubmit =
+            document.getElementById("searchSubmit");
+
+        const searchResults =
+            document.getElementById("searchResults");
+
+
+        // OPEN SEARCH
+
+        if (searchButton && searchOverlay) {
+
+            searchButton.addEventListener("click", function () {
+
+                searchOverlay.classList.add("active");
+
+                if (searchInput) {
+
+                    setTimeout(function () {
+
+                        searchInput.focus();
+
+                    }, 200);
+
+                }
+
+            });
+
+        }
+
+
+        // CLOSE SEARCH
+
+        if (searchClose && searchOverlay) {
+
+            searchClose.addEventListener("click", function () {
+
+                searchOverlay.classList.remove("active");
+
+            });
+
+        }
+
+
+        // CLOSE WHEN CLICKING OUTSIDE SEARCH BOX
+
+        if (searchOverlay) {
+
+            searchOverlay.addEventListener("click", function (e) {
+
+                if (e.target === searchOverlay) {
+
+                    searchOverlay.classList.remove("active");
+
+                }
+
+            });
+
+        }
+
+
+        // SEARCH FUNCTION
+
+        function performSearch() {
+
+            const query =
+                searchInput.value.trim();
+
+            if (query === "") {
+
+                searchResults.innerHTML =
+                    "Please enter a search term.";
+
+                return;
+
+            }
+
+            searchResults.innerHTML =
+                'Searching for <strong>"' +
+                query +
+                '"</strong>...';
+
+        }
+
+
+        // SEARCH BUTTON
+
+        if (searchSubmit) {
+
+            searchSubmit.addEventListener(
+                "click",
+                performSearch
+            );
+
+        }
+
+
+        // ENTER + ESCAPE
+
+        if (searchInput) {
+
+            searchInput.addEventListener("keydown", function (e) {
+
+                if (e.key === "Enter") {
+
+                    performSearch();
+
+                }
+
+                if (e.key === "Escape") {
+
+                    searchOverlay.classList.remove("active");
+
+                }
+
+            });
+
+        }
+
+
+        // =====================================================
+        // CONTACT FORM
+        // =====================================================
+
+        const contactForm =
+            document.getElementById("contactForm");
 
         if (contactForm) {
 
@@ -426,7 +622,9 @@
 
                 e.preventDefault();
 
-                alert("Thank you! Your message has been sent.");
+                alert(
+                    "Thank you! Your message has been sent."
+                );
 
                 contactForm.reset();
 
@@ -435,7 +633,10 @@
         }
 
     </script>
-   <script src="assets/JS/bootstrap.bundle.min.js"></script>
+
+
+    <script src="assets/JS/bootstrap.bundle.min.js"></script>
+
     <script src="assets/JS/function.js"></script>
 
 </body>

@@ -85,9 +85,34 @@
 
     </nav>
 </header>
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
 
+        <button type="button" class="search-close" id="searchClose">×</button>
 
-<!-- ================= TECHNOLOGY HERO ================= -->
+        <h2>Search <span>Velora</span></h2>
+
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search watches..." 
+                autocomplete="off"
+            >
+
+            <button type="button" id="searchSubmit">
+                SEARCH
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+
+    </div>
+</div>
+
+<!-- Technology Hero -->
+
 
 <section class="technology-hero">
 
@@ -413,6 +438,136 @@ if (menuButton && navLinks) {
 
 }
 
+</script>
+
+<!-- SEARCH FUNCTION -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchButton = document.getElementById("searchButton");
+    const searchOverlay = document.getElementById("searchOverlay");
+    const searchClose = document.getElementById("searchClose");
+    const searchInput = document.getElementById("searchInput");
+    const searchSubmit = document.getElementById("searchSubmit");
+    const searchResults = document.getElementById("searchResults");
+
+    if (!searchButton || !searchOverlay) {
+        console.log("Search elements not found");
+        return;
+    }
+
+    function openSearch() {
+        searchOverlay.classList.add("active");
+
+        if (searchInput) {
+            searchInput.value = "";
+            searchInput.focus();
+        }
+
+        if (searchResults) {
+            searchResults.innerHTML = "";
+        }
+    }
+
+    function closeSearch() {
+        searchOverlay.classList.remove("active");
+    }
+
+    function performSearch() {
+
+        const value = searchInput.value.trim().toLowerCase();
+        const products = document.querySelectorAll(".product-card");
+
+        if (value === "") {
+
+            products.forEach(function (product) {
+                product.style.display = "";
+            });
+
+            searchResults.innerHTML = "Please enter a watch name.";
+            return;
+        }
+
+        let found = 0;
+        let firstMatch = null;
+
+        products.forEach(function (product) {
+
+            const text = product.textContent.toLowerCase();
+
+            if (text.includes(value)) {
+
+                product.style.display = "";
+                found++;
+
+                if (!firstMatch) {
+                    firstMatch = product;
+                }
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+        if (found > 0) {
+
+            searchResults.innerHTML =
+                "<strong>" + found + "</strong> watch found.";
+
+            setTimeout(function () {
+
+                closeSearch();
+
+                if (firstMatch) {
+                    firstMatch.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                }
+
+            }, 600);
+
+        } else {
+
+            searchResults.innerHTML =
+                'No watch found for "<strong>' +
+                searchInput.value +
+                '</strong>".';
+
+        }
+    }
+
+    searchButton.addEventListener("click", openSearch);
+
+    searchClose.addEventListener("click", closeSearch);
+
+    searchSubmit.addEventListener("click", performSearch);
+
+    searchInput.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+        }
+
+        if (event.key === "Escape") {
+            closeSearch();
+        }
+
+    });
+
+    searchOverlay.addEventListener("click", function (event) {
+
+        if (event.target === searchOverlay) {
+            closeSearch();
+        }
+
+    });
+
+});
 </script>
 
 

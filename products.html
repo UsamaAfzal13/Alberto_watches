@@ -57,6 +57,31 @@
 
         </nav>
     </header>
+    <!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+
+        <button type="button" class="search-close" id="searchClose">×</button>
+
+        <h2>Search <span>Velora</span></h2>
+
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search watches..." 
+                autocomplete="off"
+            >
+
+            <button type="button" id="searchSubmit">
+                SEARCH
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+
+    </div>
+</div>
 
 
     <!-- ================= PRODUCTS HERO ================= -->
@@ -822,99 +847,135 @@
 
 
   <!-- SEARCH FUNCTION -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
 
-            const searchButton = document.getElementById("searchButton");
-            const searchOverlay = document.getElementById("searchOverlay");
-            const searchClose = document.getElementById("searchClose");
-            const searchInput = document.getElementById("searchInput");
-            const searchSubmit = document.getElementById("searchSubmit");
-            const searchResults = document.getElementById("searchResults");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-            if (!searchButton || !searchOverlay) return;
+    const searchButton = document.getElementById("searchButton");
+    const searchOverlay = document.getElementById("searchOverlay");
+    const searchClose = document.getElementById("searchClose");
+    const searchInput = document.getElementById("searchInput");
+    const searchSubmit = document.getElementById("searchSubmit");
+    const searchResults = document.getElementById("searchResults");
 
-            function openSearch() {
-                searchOverlay.classList.add("active");
-                searchInput.value = "";
-                searchResults.innerHTML = "";
-                setTimeout(function () {
-                    searchInput.focus();
-                }, 100);
-            }
+    if (!searchButton || !searchOverlay) {
+        console.log("Search elements not found");
+        return;
+    }
 
-            function closeSearch() {
-                searchOverlay.classList.remove("active");
-            }
+    function openSearch() {
+        searchOverlay.classList.add("active");
 
-            function performSearch() {
-                const value = searchInput.value.trim().toLowerCase();
-                const products = document.querySelectorAll(".product-card");
+        if (searchInput) {
+            searchInput.value = "";
+            searchInput.focus();
+        }
 
-                if (value === "") {
-                    products.forEach(function (product) {
-                        product.style.display = "";
-                    });
-                    searchResults.innerHTML = "Please enter a watch name.";
-                    return;
-                }
+        if (searchResults) {
+            searchResults.innerHTML = "";
+        }
+    }
 
-                let found = 0;
+    function closeSearch() {
+        searchOverlay.classList.remove("active");
+    }
 
-                products.forEach(function (product) {
-                    const name = product.querySelector("h3");
-                    const text = product.textContent.toLowerCase();
+    function performSearch() {
 
-                    if (text.includes(value)) {
-                        product.style.display = "";
-                        found++;
-                    } else {
-                        product.style.display = "none";
-                    }
-                });
+        const value = searchInput.value.trim().toLowerCase();
+        const products = document.querySelectorAll(".product-card");
 
-                if (found > 0) {
-                    searchResults.innerHTML = "<strong>" + found + "</strong> watch found.";
-                    setTimeout(function () {
-                        closeSearch();
-                        const firstMatch = document.querySelector(".product-card:not([style*='display: none'])");
-                        if (firstMatch) {
-                            firstMatch.scrollIntoView({
-                                behavior: "smooth",
-                                block: "center"
-                            });
-                        }
-                    }, 600);
-                } else {
-                    searchResults.innerHTML = "No watch found for <strong>" +
-                        searchInput.value +
-                        "</strong>.";
-                }
-            }
+        if (value === "") {
 
-            searchButton.addEventListener("click", openSearch);
-            searchClose.addEventListener("click", closeSearch);
-            searchSubmit.addEventListener("click", performSearch);
-
-            searchInput.addEventListener("keydown", function (event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    performSearch();
-                }
-
-                if (event.key === "Escape") {
-                    closeSearch();
-                }
+            products.forEach(function (product) {
+                product.style.display = "";
             });
 
-            searchOverlay.addEventListener("click", function (event) {
-                if (event.target === searchOverlay) {
-                    closeSearch();
+            searchResults.innerHTML = "Please enter a watch name.";
+            return;
+        }
+
+        let found = 0;
+        let firstMatch = null;
+
+        products.forEach(function (product) {
+
+            const text = product.textContent.toLowerCase();
+
+            if (text.includes(value)) {
+
+                product.style.display = "";
+                found++;
+
+                if (!firstMatch) {
+                    firstMatch = product;
                 }
-            });
+
+            } else {
+
+                product.style.display = "none";
+
+            }
 
         });
-    </script>
+
+        if (found > 0) {
+
+            searchResults.innerHTML =
+                "<strong>" + found + "</strong> watch found.";
+
+            setTimeout(function () {
+
+                closeSearch();
+
+                if (firstMatch) {
+                    firstMatch.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                }
+
+            }, 600);
+
+        } else {
+
+            searchResults.innerHTML =
+                'No watch found for "<strong>' +
+                searchInput.value +
+                '</strong>".';
+
+        }
+    }
+
+    searchButton.addEventListener("click", openSearch);
+
+    searchClose.addEventListener("click", closeSearch);
+
+    searchSubmit.addEventListener("click", performSearch);
+
+    searchInput.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+        }
+
+        if (event.key === "Escape") {
+            closeSearch();
+        }
+
+    });
+
+    searchOverlay.addEventListener("click", function (event) {
+
+        if (event.target === searchOverlay) {
+            closeSearch();
+        }
+
+    });
+
+});
+</script>
   <script src="assets/JS/bootstrap.bundle.min.js"></script>
     <script src="assets/JS/function.js"></script>
 

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Velora | Gallery</title>
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style copy.css">
 </head>
 
 <body>
 
-     <!-- TOP BAR -->
+    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="top-bar-content">
             <span>★</span>
@@ -22,387 +24,905 @@
     </div>
 
 
-<!-- NAVBAR -->
-<header>
-    <nav class="navbar">
+    <!-- NAVBAR -->
+    <header>
 
-           <a href="#" class="logo">
+        <nav class="navbar">
+
+            <a href="#" class="logo">
                 <img src="assets/images/logo.png.png" alt="Velora Watches">
             </a>
 
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
+            <div class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
                 <a href="technology.html">Technolgy</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact Us</a> 
-        </div>
+                <a href="contact.html">Contact Us</a>
 
-        <div class="nav-icons">
-                <button type="button" class="search-button" id="searchButton" aria-label="Search"><img src="assets/images/search (1).svg" width="24px" alt="Search"></button>
-                <button> <img src="assets/images/heart.svg" width="24px" alt=""></button>
+            </div>
 
-                <button class="cart-button" id="cartButton">
-                    <img src="assets/images/cart.svg" width="24px" alt="">
-                    <span id="cartCount">0</span>
+            <div class="nav-icons">
+
+                <!-- SEARCH -->
+                <button
+                    type="button"
+                    class="search-button"
+                    id="searchButton"
+                    aria-label="Search">
+
+                    <img
+                        src="assets/images/search (1).svg"
+                        width="24px"
+                        alt="Search">
+
                 </button>
 
-                <button class="menu-button" id="menuButton">☰</button>
+
+                <!-- WISHLIST -->
+                <button type="button">
+
+                    <img
+                        src="assets/images/heart.svg"
+                        width="24px"
+                        alt="Wishlist">
+
+                </button>
+
+
+                <!-- CART -->
+                <button
+                    type="button"
+                    class="cart-button"
+                    id="cartButton">
+
+                    <img
+                        src="assets/images/cart.svg"
+                        width="24px"
+                        alt="Cart">
+
+                    <span id="cartCount">0</span>
+
+                </button>
+
+
+                <!-- MOBILE MENU -->
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH OVERLAY
+    ====================================================== -->
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button
+                type="button"
+                class="search-close"
+                id="searchClose">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                Search <span>Velora</span>
+            </h2>
+
+
+            <div class="search-input-wrapper">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search watches..."
+                    autocomplete="off">
+
+
+                <button
+                    type="button"
+                    id="searchSubmit">
+
+                    SEARCH
+
+                </button>
+
             </div>
 
 
-    </nav>
-</header>
+            <div
+                class="search-results"
+                id="searchResults">
+            </div>
 
-
-<!-- GALLERY HERO -->
-<section class="gallery-hero">
-
-    <div class="gallery-hero-content">
-
-        <p class="subtitle">THE VELORA COLLECTION</p>
-
-        <h1>
-            TIME
-            <span>IN FOCUS.</span>
-        </h1>
-
-        <p>
-            Explore the world of Velora through our
-            collection of timeless watches.
-        </p>
+        </div>
 
     </div>
 
-</section>
+
+    <!-- GALLERY HERO -->
+
+    <section class="gallery-hero">
+
+        <div class="gallery-hero-content">
+
+            <p class="subtitle">
+                THE VELORA COLLECTION
+            </p>
+
+            <h1>
+                TIME
+                <span>IN FOCUS.</span>
+            </h1>
+
+            <p>
+                Explore the world of Velora through our
+                collection of timeless watches.
+            </p>
+
+        </div>
+
+    </section>
 
 
-<!-- GALLERY -->
-<section class="gallery-section">
+    <!-- GALLERY -->
 
-    <div class="gallery-heading">
+    <section class="gallery-section">
 
-        <p class="subtitle">VISUAL COLLECTION</p>
+        <div class="gallery-heading">
+
+            <p class="subtitle">
+                VISUAL COLLECTION
+            </p>
+
+            <h2>
+                MOMENTS OF
+                <span>TIME.</span>
+            </h2>
+
+            <p>
+                Discover our collection through a closer look
+                at Velora's elegant designs and craftsmanship.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item gallery-large">
+
+                <img
+                    src="images/watch1.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>CHRONOGRAPH</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch2.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>CLASSIC SILVER</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch3.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>ROYAL AUTOMATIC</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch4.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>EXECUTIVE GOLD</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item gallery-wide">
+
+                <img
+                    src="images/watch5.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>MIDNIGHT STEEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch6.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>HERITAGE BROWN</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch7.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>ELITE SILVER</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item gallery-large">
+
+                <img
+                    src="images/watch8.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>OCEAN BLUE</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch9.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>PRESTIGE BLACK</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch10.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>CLASSIC GOLD</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item gallery-wide">
+
+                <img
+                    src="images/watch11.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>URBAN STEEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch12.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>SIGNATURE BROWN</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch13.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>ROYAL BLUE</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch14.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>MINIMAL SILVER</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch15.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>BLACK EDITION</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item gallery-wide">
+
+                <img
+                    src="images/watch16.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>LUXURY GOLD</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch17.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>SPORT CHRONO</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch18.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>CLASSIC BLACK</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/watch19.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>PRESTIGE GOLD</span>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item gallery-large">
+
+                <img
+                    src="images/watch20.jpg"
+                    alt="Velora Watch">
+
+                <div class="gallery-overlay">
+                    <span>SIGNATURE EDITION</span>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VIDEO
+            ================================================== -->
+
+            <div class="gallery-item gallery-video">
+
+                <video
+                    controls
+                    muted
+                    loop
+                    playsinline>
+
+                    <source
+                        src="assets/videos/watch-video.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+
+                <div class="gallery-overlay">
+
+                    <span>
+                        VELORA COLLECTION
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="gallery-cta">
+
+        <p class="subtitle">
+            FIND YOUR TIMEPIECE
+        </p>
 
         <h2>
-            MOMENTS OF
-            <span>TIME.</span>
+            YOUR TIME.
+            <span>YOUR STYLE.</span>
         </h2>
 
+        <a
+            href="products.html"
+            class="about-btn">
+
+            VIEW COLLECTION
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <img
+            src="images/velora-logo.png"
+            alt="Velora">
+
         <p>
-            Discover our collection through a closer look
-            at Velora's elegant designs and craftsmanship.
+            Timeless watches. Refined living.
         </p>
 
-    </div>
+        <div>
 
+            <a href="index.html">
+                Home
+            </a>
 
-    <div class="gallery-grid">
+            <a href="products.html">
+                Watches
+            </a>
 
-        <div class="gallery-item gallery-large">
-            <img src="images/watch1.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>CHRONOGRAPH</span>
-            </div>
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="images/watch2.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>CLASSIC SILVER</span>
-            </div>
-        </div>
+        <small>
+            © 2026 Velora Watches. All Rights Reserved.
+        </small>
 
-        <div class="gallery-item">
-            <img src="images/watch3.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>ROYAL AUTOMATIC</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch4.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>EXECUTIVE GOLD</span>
-            </div>
-        </div>
-
-        <div class="gallery-item gallery-wide">
-            <img src="images/watch5.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>MIDNIGHT STEEL</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch6.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>HERITAGE BROWN</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch7.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>ELITE SILVER</span>
-            </div>
-        </div>
-
-        <div class="gallery-item gallery-large">
-            <img src="images/watch8.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>OCEAN BLUE</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch9.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>PRESTIGE BLACK</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch10.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>CLASSIC GOLD</span>
-            </div>
-        </div>
-
-        <div class="gallery-item gallery-wide">
-            <img src="images/watch11.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>URBAN STEEL</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch12.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>SIGNATURE BROWN</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch13.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>ROYAL BLUE</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch14.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>MINIMAL SILVER</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch15.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>BLACK EDITION</span>
-            </div>
-        </div>
-
-        <div class="gallery-item gallery-wide">
-            <img src="images/watch16.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>LUXURY GOLD</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch17.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>SPORT CHRONO</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch18.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>CLASSIC BLACK</span>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/watch19.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>PRESTIGE GOLD</span>
-            </div>
-        </div>
-
-        <div class="gallery-item gallery-large">
-            <img src="images/watch20.jpg" alt="Velora Watch">
-            <div class="gallery-overlay">
-                <span>SIGNATURE EDITION</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- CTA -->
-<section class="gallery-cta">
+    <!-- =====================================================
+         LIVE TIME
+    ====================================================== -->
 
-    <p class="subtitle">FIND YOUR TIMEPIECE</p>
+    <script>
 
-    <h2>
-        YOUR TIME.
-        <span>YOUR STYLE.</span>
-    </h2>
+        function updateTopTime() {
 
-    <a href="products.html" class="about-btn">
-        VIEW COLLECTION
-    </a>
+            const timeElement =
+                document.getElementById("topTime");
 
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <img src="images/velora-logo.png" alt="Velora">
-
-    <p>Timeless watches. Refined living.</p>
-
-    <div>
-        <a href="index.html">Home</a>
-        <a href="products.html">Watches</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-    </div>
-
-    <small>
-        © 2026 Velora Watches. All Rights Reserved.
-    </small>
-
-</footer>
-
- <script>
-          function updateTopTime() {
-            const timeElement = document.getElementById("topTime");
             if (!timeElement) return;
 
+
             const now = new Date();
+
             let hours = now.getHours();
-            const minutes = String(now.getMinutes()).padStart(2, "0");
-            const seconds = String(now.getSeconds()).padStart(2, "0");
-            const ampm = hours >= 12 ? "PM" : "AM";
+
+            const minutes =
+                String(now.getMinutes()).padStart(2, "0");
+
+            const seconds =
+                String(now.getSeconds()).padStart(2, "0");
+
+            const ampm =
+                hours >= 12 ? "PM" : "AM";
+
 
             hours = hours % 12;
-            if (hours === 0) hours = 12;
-            hours = String(hours).padStart(2, "0");
 
-            timeElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+            if (hours === 0) {
+                hours = 12;
+            }
+
+
+            hours =
+                String(hours).padStart(2, "0");
+
+
+            timeElement.textContent =
+                `${hours}:${minutes}:${seconds} ${ampm}`;
+
         }
 
+
         updateTopTime();
+
         setInterval(updateTopTime, 1000);
+
     </script>
 
 
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
 
-  <!-- SEARCH FUNCTION -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
 
-            const searchButton = document.getElementById("searchButton");
-            const searchOverlay = document.getElementById("searchOverlay");
-            const searchClose = document.getElementById("searchClose");
-            const searchInput = document.getElementById("searchInput");
-            const searchSubmit = document.getElementById("searchSubmit");
-            const searchResults = document.getElementById("searchResults");
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
-            if (!searchButton || !searchOverlay) return;
+                const menuButton =
+                    document.getElementById("menuButton");
 
-            function openSearch() {
-                searchOverlay.classList.add("active");
-                searchInput.value = "";
-                searchResults.innerHTML = "";
-                setTimeout(function () {
-                    searchInput.focus();
-                }, 100);
-            }
+                const navLinks =
+                    document.getElementById("navLinks");
 
-            function closeSearch() {
-                searchOverlay.classList.remove("active");
-            }
 
-            function performSearch() {
-                const value = searchInput.value.trim().toLowerCase();
-                const products = document.querySelectorAll(".product-card");
+                if (menuButton && navLinks) {
 
-                if (value === "") {
-                    products.forEach(function (product) {
-                        product.style.display = "";
-                    });
-                    searchResults.innerHTML = "Please enter a watch name.";
-                    return;
-                }
+                    menuButton.addEventListener(
+                        "click",
+                        function () {
 
-                let found = 0;
+                            navLinks.classList.toggle("active");
 
-                products.forEach(function (product) {
-                    const name = product.querySelector("h3");
-                    const text = product.textContent.toLowerCase();
-
-                    if (text.includes(value)) {
-                        product.style.display = "";
-                        found++;
-                    } else {
-                        product.style.display = "none";
-                    }
-                });
-
-                if (found > 0) {
-                    searchResults.innerHTML = "<strong>" + found + "</strong> watch found.";
-                    setTimeout(function () {
-                        closeSearch();
-                        const firstMatch = document.querySelector(".product-card:not([style*='display: none'])");
-                        if (firstMatch) {
-                            firstMatch.scrollIntoView({
-                                behavior: "smooth",
-                                block: "center"
-                            });
                         }
-                    }, 600);
-                } else {
-                    searchResults.innerHTML = "No watch found for <strong>" +
-                        searchInput.value +
-                        "</strong>.";
+                    );
+
                 }
+
             }
+        );
 
-            searchButton.addEventListener("click", openSearch);
-            searchClose.addEventListener("click", closeSearch);
-            searchSubmit.addEventListener("click", performSearch);
-
-            searchInput.addEventListener("keydown", function (event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    performSearch();
-                }
-
-                if (event.key === "Escape") {
-                    closeSearch();
-                }
-            });
-
-            searchOverlay.addEventListener("click", function (event) {
-                if (event.target === searchOverlay) {
-                    closeSearch();
-                }
-            });
-
-        });
     </script>
 
-<script src="assets/JS/bootstrap.bundle.min.js"></script>
+
+    <!-- =====================================================
+         SEARCH FUNCTION
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const searchButton =
+                    document.getElementById("searchButton");
+
+                const searchOverlay =
+                    document.getElementById("searchOverlay");
+
+                const searchClose =
+                    document.getElementById("searchClose");
+
+                const searchInput =
+                    document.getElementById("searchInput");
+
+                const searchSubmit =
+                    document.getElementById("searchSubmit");
+
+                const searchResults =
+                    document.getElementById("searchResults");
+
+
+                if (
+                    !searchButton ||
+                    !searchOverlay ||
+                    !searchClose ||
+                    !searchInput ||
+                    !searchSubmit ||
+                    !searchResults
+                ) {
+
+                    return;
+
+                }
+
+
+                /* OPEN SEARCH */
+
+                function openSearch() {
+
+                    searchOverlay.classList.add("active");
+
+                    searchInput.value = "";
+
+                    searchResults.innerHTML = "";
+
+                    setTimeout(
+                        function () {
+
+                            searchInput.focus();
+
+                        },
+                        150
+                    );
+
+                }
+
+
+                /* CLOSE SEARCH */
+
+                function closeSearch() {
+
+                    searchOverlay.classList.remove("active");
+
+                }
+
+
+                /* SEARCH GALLERY */
+
+                function performSearch() {
+
+                    const value =
+                        searchInput.value
+                            .trim()
+                            .toLowerCase();
+
+
+                    const galleryItems =
+                        document.querySelectorAll(
+                            ".gallery-item"
+                        );
+
+
+                    if (value === "") {
+
+                        galleryItems.forEach(
+                            function (item) {
+
+                                item.style.display = "";
+
+                            }
+                        );
+
+
+                        searchResults.innerHTML =
+                            "Please enter a watch name.";
+
+                        return;
+
+                    }
+
+
+                    let found = 0;
+
+
+                    galleryItems.forEach(
+                        function (item) {
+
+                            const text =
+                                item.textContent
+                                    .toLowerCase();
+
+
+                            if (
+                                text.includes(value)
+                            ) {
+
+                                item.style.display = "";
+
+                                found++;
+
+                            } else {
+
+                                item.style.display = "none";
+
+                            }
+
+                        }
+                    );
+
+
+                    if (found > 0) {
+
+                        searchResults.innerHTML =
+                            "<strong>" +
+                            found +
+                            "</strong> watch found.";
+
+
+                        setTimeout(
+                            function () {
+
+                                closeSearch();
+
+
+                                const firstMatch =
+                                    document.querySelector(
+                                        ".gallery-item:not([style*='display: none'])"
+                                    );
+
+
+                                if (firstMatch) {
+
+                                    firstMatch.scrollIntoView({
+
+                                        behavior: "smooth",
+
+                                        block: "center"
+
+                                    });
+
+                                }
+
+                            },
+                            600
+                        );
+
+
+                    } else {
+
+                        searchResults.innerHTML =
+                            "No watch found for <strong>" +
+                            searchInput.value +
+                            "</strong>.";
+
+                    }
+
+                }
+
+
+                /* SEARCH BUTTON */
+
+                searchButton.addEventListener(
+                    "click",
+                    openSearch
+                );
+
+
+                /* CLOSE BUTTON */
+
+                searchClose.addEventListener(
+                    "click",
+                    closeSearch
+                );
+
+
+                /* SEARCH SUBMIT */
+
+                searchSubmit.addEventListener(
+                    "click",
+                    performSearch
+                );
+
+
+                /* ENTER + ESCAPE */
+
+                searchInput.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (event.key === "Enter") {
+
+                            event.preventDefault();
+
+                            performSearch();
+
+                        }
+
+
+                        if (event.key === "Escape") {
+
+                            closeSearch();
+
+                        }
+
+                    }
+                );
+
+
+                /* CLICK OUTSIDE */
+
+                searchOverlay.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (
+                            event.target === searchOverlay
+                        ) {
+
+                            closeSearch();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+
+
+    <script src="assets/JS/bootstrap.bundle.min.js"></script>
+
     <script src="assets/JS/function.js"></script>
 
 </body>
+
 </html>
