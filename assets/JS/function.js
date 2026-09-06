@@ -1,11 +1,5 @@
-/* =====================================================
-   VELORA WATCHES - FUNCTION.JS
-===================================================== */
+//    MOBILE MENU
 
-
-/* =====================================================
-   MOBILE MENU
-===================================================== */
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
@@ -36,9 +30,10 @@ if (menuButton && navLinks) {
 }
 
 
-/* =====================================================
-   PRODUCT FILTER
-===================================================== */
+
+
+//    PRODUCT FILTER
+
 
 const filters = document.querySelectorAll(".filter");
 const products = document.querySelectorAll(".product-card");
@@ -95,9 +90,9 @@ filters.forEach(function (filter) {
 });
 
 
-/* =====================================================
-   HEART / WISHLIST
-===================================================== */
+
+//    HEART / WISHLIST
+
 
 const heartButtons =
     document.querySelectorAll(".heart");
@@ -122,9 +117,7 @@ heartButtons.forEach(function (button) {
 });
 
 
-/* =====================================================
-   SHOPPING CART
-===================================================== */
+//    SHOPPING CART
 
 let cart = [];
 
@@ -150,10 +143,8 @@ const cartCount =
 const cartTotal =
     document.getElementById("cartTotal");
 
+//    OPEN CART
 
-/* =====================================================
-   OPEN CART
-===================================================== */
 
 if (cartButton && cartPanel && cartOverlay) {
 
@@ -168,9 +159,8 @@ if (cartButton && cartPanel && cartOverlay) {
 }
 
 
-/* =====================================================
-   CLOSE CART
-===================================================== */
+//    CLOSE CART
+
 
 if (closeCart && cartPanel && cartOverlay) {
 
@@ -185,9 +175,8 @@ if (closeCart && cartPanel && cartOverlay) {
 }
 
 
-/* =====================================================
-   CLOSE CART BY OVERLAY
-===================================================== */
+//    CLOSE CART BY OVERLAY
+
 
 if (cartOverlay && cartPanel) {
 
@@ -202,9 +191,9 @@ if (cartOverlay && cartPanel) {
 }
 
 
-/* =====================================================
-   ADD TO CART
-===================================================== */
+
+//    ADD TO CART
+
 
 const addCartButtons =
     document.querySelectorAll(".add-cart");
@@ -270,9 +259,8 @@ addCartButtons.forEach(function (button) {
             imageElement.src;
 
 
-        /* -----------------------------------------
-           CHECK IF PRODUCT ALREADY EXISTS
-        ----------------------------------------- */
+        //    CHECK IF PRODUCT ALREADY EXISTS
+     
 
         const existingProduct =
             cart.find(function (item) {
@@ -326,10 +314,8 @@ addCartButtons.forEach(function (button) {
 
 });
 
+//    UPDATE CART
 
-/* =====================================================
-   UPDATE CART
-===================================================== */
 
 function updateCart() {
 
@@ -354,9 +340,9 @@ function updateCart() {
     let totalPrice = 0;
 
 
-    /* -----------------------------------------
-       EMPTY CART
-    ----------------------------------------- */
+  
+    //    EMPTY CART
+  
 
     if (cart.length === 0) {
 
@@ -383,9 +369,9 @@ function updateCart() {
     }
 
 
-    /* -----------------------------------------
-       DISPLAY CART PRODUCTS
-    ----------------------------------------- */
+
+    //    DISPLAY CART PRODUCTS
+   
 
     cart.forEach(function (item, index) {
 
@@ -476,17 +462,16 @@ function updateCart() {
     });
 
 
-    /* -----------------------------------------
-       UPDATE CART COUNT
-    ----------------------------------------- */
+    //    UPDATE CART COUNT
+
 
     cartCount.textContent =
         totalItems;
 
 
-    /* -----------------------------------------
-       UPDATE CART TOTAL
-    ----------------------------------------- */
+  
+    //    UPDATE CART TOTAL
+
 
     cartTotal.textContent =
         "Rs. " + totalPrice.toLocaleString();
@@ -494,9 +479,8 @@ function updateCart() {
 }
 
 
-/* =====================================================
-   INCREASE QUANTITY
-===================================================== */
+//    INCREASE QUANTITY
+
 
 function increase(index) {
 
@@ -513,9 +497,9 @@ function increase(index) {
 }
 
 
-/* =====================================================
-   DECREASE QUANTITY
-===================================================== */
+
+//    DECREASE QUANTITY
+
 
 function decrease(index) {
 
@@ -540,9 +524,9 @@ function decrease(index) {
 }
 
 
-/* =====================================================
-   REMOVE ITEM
-===================================================== */
+
+//    REMOVE ITEM
+
 
 function removeItem(index) {
 
@@ -559,9 +543,9 @@ function removeItem(index) {
 }
 
 
-/* =====================================================
-   CHECKOUT
-===================================================== */
+
+//    CHECKOUT
+
 
 const checkoutButton =
     document.getElementById("checkout");
