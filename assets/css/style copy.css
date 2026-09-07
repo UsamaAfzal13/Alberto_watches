@@ -1,4 +1,3 @@
-```css
 * {
     margin: 0;
     padding: 0;
@@ -27,36 +26,29 @@ button {
 }
 
 
-/* =====================================================
-   TOP PROMO BAR
-===================================================== */
+   /* TOP PROMO BAR */
 
 .top-bar {
     width: 100%;
     background: #111;
     color: #fff;
+    overflow: hidden;
     position: relative;
     z-index: 1101;
-    overflow: hidden;
 }
 
 .top-bar-content {
-    width: 100%;
     min-height: 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 12px;
     padding: 8px 20px;
-
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-
-    text-align: center;
+    white-space: nowrap;
 }
 
 .top-bar-content > span:first-child,
@@ -67,21 +59,17 @@ button {
 .top-time {
     margin-left: 25px;
     padding-left: 20px;
-
     border-left: 1px solid #555;
-
     color: #c49a2c;
-
     font-size: 11px;
     min-width: 90px;
-
     text-align: center;
 }
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+
+   /* NAVBAR */
+
 
 .navbar {
     width: 100%;
@@ -188,9 +176,8 @@ button {
 }
 
 
-/* =====================================================
-   COMMON
-===================================================== */
+
+   /* COMMON */
 
 .subtitle {
     color: #c49a2c;
@@ -210,9 +197,8 @@ h1 span {
 }
 
 
-/* =====================================================
-   HOME HERO
-===================================================== */
+/* 
+   HOME HERO */
 
 .hero {
     min-height: 700px;
@@ -296,9 +282,8 @@ h1 span {
 }
 
 
-/* =====================================================
-   HOME INTRO
-===================================================== */
+/* 
+   HOME INTRO Section */
 
 .intro {
     padding: 90px 8%;
@@ -323,9 +308,8 @@ h1 span {
 }
 
 
-/* =====================================================
-   HOME PRODUCTS
-===================================================== */
+
+   /* HOME PRODUCTS */
 
 .products {
     padding: 90px 7%;
@@ -519,10 +503,8 @@ h1 span {
     border-color: #c49a2c;
 }
 
-
-/* =====================================================
-   CART PRODUCT IMAGE
-===================================================== */
+/* Try Changes */
+/* CART PRODUCT IMAGE */
 
 .cart-item {
     display: flex;
@@ -559,9 +541,8 @@ h1 span {
 }
 
 
-/* =====================================================
-   PRODUCTS PAGE HERO
-===================================================== */
+
+   /* PRODUCTS PAGE HERO */
 
 .products-hero {
     min-height: 500px;
@@ -604,9 +585,8 @@ h1 span {
 }
 
 
-/* =====================================================
-   PRODUCTS PAGE
-===================================================== */
+
+   /* PRODUCTS PAGE */
 
 .products-page {
     padding: 90px 7%;
@@ -634,10 +614,7 @@ h1 span {
     color: #666;
 }
 
-
-/* =====================================================
-   TECHNOLOGY
-===================================================== */
+   /* TECHNOLOGY */
 
 .technology-hero {
     min-height: 560px;
@@ -846,10 +823,113 @@ h1 span {
 }
 
 
-/* =====================================================
-   ABOUT PAGE
-===================================================== */
+   /* ABOUT PAGE */
 
+
+
+.navbar {
+    width: 100%;
+    min-height: 78px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #c49a2c;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #c49a2c;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icons button {
+    border: none;
+    background: transparent;
+    padding: 5px;
+}
+
+.nav-icons img {
+    display: block;
+}
+
+.cart-button {
+    position: relative;
+}
+
+#cartCount {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #c49a2c;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.menu-button {
+    display: none;
+    font-size: 24px;
+}
 .about-hero {
     min-height: 560px;
 
@@ -1181,26 +1261,25 @@ h1 span {
 }
 
 
-/* =====================================================
-   GALLERY
-===================================================== */
+   /* GALLERY */
 
-.gallery-video {
-    position: relative;
-    overflow: hidden;
-    background: #000;
-}
 
-.gallery-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+        .gallery-video {
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
 
-.gallery-video video::-webkit-media-controls {
-    z-index: 5;
-}
+        .gallery-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-video video::-webkit-media-controls {
+            z-index: 5;
+        }
 
 .gallery-hero {
     min-height: 520px;
@@ -1218,8 +1297,9 @@ h1 span {
             rgba(0, 0, 0, 0.80),
             rgba(0, 0, 0, 0.35)
         ),
+        /* url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1800&q=85")  */
         url("https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
+         center/cover no-repeat;
 }
 
 .gallery-hero-content {
@@ -1564,7 +1644,7 @@ footer small {
 
 
 /* =====================================================
-   RESPONSIVE - TABLET
+   RESPONSIVE
 ===================================================== */
 
 @media (max-width: 1100px) {
@@ -1591,74 +1671,21 @@ footer small {
 }
 
 
-/* =====================================================
-   RESPONSIVE - 850px
-===================================================== */
-
 @media (max-width: 850px) {
-
-    /* TOP BAR */
-
-    .top-bar-content {
-        min-height: auto;
-
-        padding: 7px 12px;
-
-        gap: 5px 8px;
-
-        font-size: 9px;
-
-        letter-spacing: 0.5px;
-
-        white-space: normal;
-
-        flex-wrap: wrap;
-
-        line-height: 1.4;
-
-        text-align: center;
-    }
-
-    .top-bar-content > span {
-        flex-shrink: 1;
-    }
-
-    .top-time {
-        margin-left: 5px;
-        padding-left: 9px;
-
-        min-width: auto;
-
-        font-size: 9px;
-    }
-
-
-    /* NAVBAR */
 
     .nav-links {
         display: none;
-
         position: absolute;
-
         top: 100%;
         left: 0;
-
         width: 100%;
-
         background: #fff;
-
         flex-direction: column;
         align-items: center;
-
         gap: 0;
-
         padding: 15px 0;
-
         border-top: 1px solid #eee;
-
-        box-shadow:
-            0 10px 25px rgba(0, 0, 0, 0.08);
-
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         z-index: 999;
     }
 
@@ -1668,11 +1695,8 @@ footer small {
 
     .nav-links a {
         width: 100%;
-
         text-align: center;
-
         padding: 13px 20px;
-
         font-size: 14px;
     }
 
@@ -1688,21 +1712,13 @@ footer small {
 
     .menu-button {
         display: block;
-
         border: none;
         background: transparent;
-
         font-size: 25px;
-
         line-height: 1;
-
         color: #111;
-
         padding: 5px;
     }
-
-
-    /* HERO */
 
     .hero h1,
     .products-hero h1,
@@ -1744,99 +1760,25 @@ footer small {
     .gallery-wide {
         grid-column: span 1;
     }
-
-
-    /* CONTACT */
-
-    .contact-hero {
-        min-height: 350px;
-        padding: 60px 6%;
-    }
-
-    .contact-hero-content h1 {
-        font-size: 40px;
-    }
-
-    .contact-main {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .contact-page {
-        padding: 60px 6%;
-    }
-
-    .contact-form-box {
-        padding: 30px;
-    }
-
-    .location-map {
-        height: 350px;
-    }
 }
 
 
-/* =====================================================
-   RESPONSIVE - MOBILE 600px
-===================================================== */
-
 @media (max-width: 600px) {
 
-    /* TOP BAR */
-
-    .top-bar {
-        width: 100%;
-        overflow: hidden;
-    }
-
     .top-bar-content {
-        width: 100%;
-
-        min-height: auto;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 3px 6px;
-
-        padding: 7px 7px;
-
+        min-height: 34px;
+        gap: 7px;
         font-size: 8px;
-
-        letter-spacing: 0.25px;
-
-        line-height: 1.45;
-
-        white-space: normal;
-
-        text-align: center;
-
-        overflow: visible;
-    }
-
-    .top-bar-content > span {
-        max-width: 100%;
-        flex-shrink: 1;
+        letter-spacing: 0.5px;
+        padding: 8px 10px;
     }
 
     .top-time {
-        margin-left: 3px;
-
-        padding-left: 7px;
-
-        min-width: auto;
-
+        margin-left: 8px;
+        padding-left: 8px;
         font-size: 8px;
-
-        border-left: 1px solid #555;
+        min-width: 68px;
     }
-
-
-    /* NAVBAR */
 
     .navbar {
         min-height: 68px;
@@ -1845,9 +1787,6 @@ footer small {
     .logo img {
         width: 120px;
     }
-
-
-    /* HERO */
 
     .hero,
     .products-hero,
@@ -1871,9 +1810,6 @@ footer small {
         flex-direction: column;
         align-items: flex-start;
     }
-
-
-    /* SECTIONS */
 
     .intro,
     .products,
@@ -1934,66 +1870,10 @@ footer small {
         width: 100%;
         max-width: 100%;
     }
-
-
-    /* CONTACT */
-
-    .contact-hero-content h1 {
-        font-size: 32px;
-    }
-
-    .contact-hero-content p {
-        font-size: 15px;
-    }
-
-    .contact-info-box h2 {
-        font-size: 28px;
-    }
-
-    .contact-form-box h2 {
-        font-size: 25px;
-    }
-
-    .location-heading h2 {
-        font-size: 28px;
-    }
-
-    .location-map {
-        height: 280px;
-    }
 }
 
 
-/* =====================================================
-   RESPONSIVE - SMALL MOBILE 400px
-===================================================== */
-
 @media (max-width: 400px) {
-
-    /* TOP BAR */
-
-    .top-bar-content {
-        padding: 6px 5px;
-
-        gap: 2px 4px;
-
-        font-size: 7px;
-
-        letter-spacing: 0.15px;
-
-        line-height: 1.4;
-    }
-
-    .top-time {
-        margin-left: 2px;
-
-        padding-left: 5px;
-
-        font-size: 7px;
-    }
-
-
-    /* HERO */
 
     .hero h1,
     .products-hero h1,
@@ -2008,28 +1888,20 @@ footer small {
     }
 }
 
-
 /* =====================================================
    SEARCH OVERLAY
 ===================================================== */
 
 .search-overlay {
     position: fixed;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     display: none;
-
     align-items: flex-start;
     justify-content: center;
-
     padding-top: 120px;
-
     background: rgba(0, 0, 0, 0.70);
-
     z-index: 99999;
 }
 
@@ -2039,25 +1911,17 @@ footer small {
 
 .search-box {
     position: relative;
-
     width: 90%;
     max-width: 650px;
-
     padding: 40px;
-
     background: #fff;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.30);
 }
 
 .search-box h2 {
     margin: 0 0 25px;
-
     text-align: center;
-
     font-family: Georgia, serif;
-
     font-size: 30px;
 }
 
@@ -2067,42 +1931,28 @@ footer small {
 
 .search-close {
     position: absolute;
-
     top: 10px;
     right: 15px;
-
     border: none;
-
     background: transparent;
-
     color: #111;
-
     font-size: 32px;
-
     line-height: 1;
-
     cursor: pointer;
 }
 
 .search-input-wrapper {
     display: flex;
-
     width: 100%;
 }
 
 .search-input-wrapper input {
     flex: 1;
-
     min-width: 0;
-
     padding: 15px;
-
     border: 1px solid #ddd;
-
     outline: none;
-
     font-size: 15px;
-
     color: #111;
 }
 
@@ -2112,17 +1962,11 @@ footer small {
 
 .search-input-wrapper button {
     padding: 0 25px;
-
     border: none;
-
     background: #111;
-
     color: #fff;
-
     font-size: 12px;
-
     font-weight: bold;
-
     cursor: pointer;
 }
 
@@ -2132,13 +1976,9 @@ footer small {
 
 .search-results {
     min-height: 22px;
-
     margin-top: 18px;
-
     text-align: center;
-
     color: #555;
-
     font-size: 14px;
 }
 
@@ -2146,16 +1986,13 @@ footer small {
     color: #c49a2c;
 }
 
-
 @media (max-width: 600px) {
-
     .search-overlay {
         padding-top: 80px;
     }
 
     .search-box {
         width: 94%;
-
         padding: 32px 20px 25px;
     }
 
@@ -2165,7 +2002,6 @@ footer small {
 
     .search-input-wrapper {
         flex-direction: column;
-
         gap: 10px;
     }
 
@@ -2173,23 +2009,54 @@ footer small {
         min-height: 45px;
     }
 }
+  /* CONTACT PAGE */
+  .top-bar {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1101;
+}
 
-
-/* =====================================================
-   CONTACT PAGE
-===================================================== */
-
-.contact-hero {
-    min-height: 420px;
-
+.top-bar-content {
+    min-height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
 
+.top-bar-content > span:first-child,
+.top-bar-content > span:nth-child(3) {
+    color: #c49a2c;
+}
+
+.top-time {
+    margin-left: 25px;
+    padding-left: 20px;
+    border-left: 1px solid #555;
+    color: #c49a2c;
+    font-size: 11px;
+    min-width: 90px;
     text-align: center;
+}
 
+/* TOP BAR */
+
+.contact-hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 80px 8%;
-
     color: #fff;
 
     background:
@@ -2205,65 +2072,54 @@ footer small {
 
 .contact-hero-content h1 {
     font-size: 52px;
-
     margin-bottom: 12px;
-
     letter-spacing: 1px;
 }
 
 .contact-hero-content p {
     font-size: 17px;
-
     opacity: 0.9;
 }
 
 
-/* CONTACT MAIN */
+
+   /* CONTACT MAIN */
 
 .contact-page {
     padding: 80px 7%;
-
     background: #fff;
 }
 
 .contact-main {
     max-width: 1200px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 60px;
 }
 
 
-/* CONTACT INFO */
+/* =====================================================
+   CONTACT INFO
+===================================================== */
 
 .contact-info-box h2 {
     font-size: 34px;
-
     margin-bottom: 18px;
-
     color: #111;
 }
 
 .contact-info-box > p {
     color: #666;
-
     line-height: 1.8;
-
     margin-bottom: 35px;
 }
 
 .contact-detail {
     display: flex;
-
     align-items: flex-start;
-
     gap: 18px;
-
     margin-bottom: 25px;
 }
 
@@ -2272,80 +2128,63 @@ footer small {
     height: 45px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     background: #f7f2e7;
-
     color: #c49a2c;
-
     font-size: 20px;
-
     border-radius: 50%;
-
     flex-shrink: 0;
 }
 
 .contact-detail h4 {
     margin-bottom: 4px;
-
     font-size: 16px;
-
     color: #111;
 }
 
 .contact-detail p {
     margin: 0;
-
     color: #666;
-
     line-height: 1.6;
 }
 
 
-/* CONTACT FORM */
+/* /* ===================================================== */
+   /* CONTACT FORM */
+
 
 .contact-form-box {
     background: #fafafa;
-
     padding: 40px;
-
     border: 1px solid #eee;
 }
 
 .contact-form-box h2 {
     font-size: 30px;
-
     margin-bottom: 25px;
-
     color: #111;
 }
 
 .contact-form {
     display: flex;
-
     flex-direction: column;
-
     gap: 18px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-
     padding: 14px 16px;
 
     border: 1px solid #ddd;
-
     outline: none;
 
     font-family: Arial, sans-serif;
-
     font-size: 14px;
 
     background: #fff;
-
     transition: 0.3s ease;
 }
 
@@ -2355,7 +2194,6 @@ footer small {
 
 .contact-form textarea {
     min-height: 150px;
-
     resize: vertical;
 }
 
@@ -2366,19 +2204,14 @@ footer small {
 
 .contact-submit {
     width: fit-content;
-
     padding: 14px 30px;
 
     border: none;
-
     background: #111;
-
     color: #fff;
 
     font-size: 14px;
-
     font-weight: 600;
-
     cursor: pointer;
 
     transition: 0.3s ease;
@@ -2389,25 +2222,23 @@ footer small {
 }
 
 
-/* LOCATION / MAP */
+/* 
+   LOCATION / MAP */
+
 
 .contact-location {
     max-width: 1200px;
-
     margin: 70px auto 0;
 }
 
 .location-heading {
     text-align: center;
-
     margin-bottom: 30px;
 }
 
 .location-heading h2 {
     font-size: 34px;
-
     color: #111;
-
     margin-bottom: 10px;
 }
 
@@ -2417,30 +2248,25 @@ footer small {
 
 .location-map {
     width: 100%;
-
     height: 420px;
-
     overflow: hidden;
-
     border: 1px solid #eee;
 }
 
 .location-map iframe {
     width: 100%;
-
     height: 100%;
-
     border: 0;
 }
 
+/* 
+   CONTACT RESPONSIVE */
 
-/* CONTACT RESPONSIVE */
 
 @media (max-width: 850px) {
 
     .contact-hero {
         min-height: 350px;
-
         padding: 60px 6%;
     }
 
@@ -2450,7 +2276,6 @@ footer small {
 
     .contact-main {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
@@ -2494,4 +2319,312 @@ footer small {
         height: 280px;
     }
 }
-```
+/* 
+TOP BAR RESPONSIVE FIX */
+
+
+@media (max-width: 850px) {
+
+    .top-bar-content {
+        min-height: 36px;
+        padding: 8px 15px;
+        gap: 8px;
+
+        font-size: 9px;
+        letter-spacing: 0.7px;
+
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .top-time {
+        margin-left: 12px;
+        padding-left: 12px;
+
+        min-width: 75px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .top-bar {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .top-bar-content {
+        min-height: 34px;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        padding: 7px 8px;
+
+        font-size: 8px;
+        letter-spacing: 0.4px;
+
+        white-space: nowrap;
+    }
+
+    .top-bar-content > span {
+        flex-shrink: 0;
+    }
+
+    .top-time {
+        margin-left: 6px;
+        padding-left: 7px;
+
+        min-width: 62px;
+
+        font-size: 8px;
+
+        border-left: 1px solid #555;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width: 400px) {
+
+    .top-bar-content {
+        gap: 4px;
+        padding: 7px 5px;
+
+        font-size: 7px;
+        letter-spacing: 0.3px;
+    }
+
+    .top-time {
+        margin-left: 4px;
+        padding-left: 5px;
+
+        min-width: 55px;
+
+        font-size: 7px;
+    }
+}
+/* =====================================================
+   FINAL MOBILE FIX
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        min-height: 68px;
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 105px;
+        max-width: 100%;
+    }
+
+    /* RIGHT SIDE ICONS */
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .nav-icons button {
+        width: 38px;
+        height: 38px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-icons img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    /* CART BUTTON */
+    .cart-button {
+        position: relative;
+        width: 38px;
+        height: 38px;
+    }
+
+    /* CART COUNT */
+    #cartCount {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+
+        width: 17px;
+        height: 17px;
+
+        min-width: 17px;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        font-size: 9px;
+        line-height: 1;
+        font-weight: bold;
+
+        z-index: 10;
+    }
+
+    /* MENU BUTTON */
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 0;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    /* MOBILE MENU */
+    .nav-links {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+
+    /* ================================
+       PRODUCT CARDS
+    ================================= */
+
+    .products,
+    .products-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* ================================
+       CART SIDEBAR
+    ================================= */
+
+    .cart {
+        width: 100%;
+        max-width: 100%;
+        height: 100dvh;
+
+        padding: 20px 16px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .cart-header {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 5;
+
+        padding-bottom: 15px;
+    }
+
+    .cart-items {
+        padding: 20px 0;
+    }
+
+    .cart-item {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cart-item-info {
+        min-width: 0;
+    }
+
+    .cart-item-info h4 {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+
+    /* ================================
+       SEARCH MOBILE
+    ================================= */
+
+    .search-box {
+        width: calc(100% - 30px);
+        max-width: none;
+        padding: 30px 18px 22px;
+    }
+
+    .search-input-wrapper input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .search-input-wrapper button {
+        width: 100%;
+    }
+
+
+    /* ================================
+       CONTACT FORM
+    ================================= */
+
+    .contact-form-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        max-width: 100%;
+    }
+
+}
+
+
