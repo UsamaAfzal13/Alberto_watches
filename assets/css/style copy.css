@@ -2626,5 +2626,1025 @@ TOP BAR RESPONSIVE FIX */
     }
 
 }
+/* =====================================================
+   VELORA WATCHES
+   EXTRA FEATURES CSS
+   Popup + Fade Animation + Ticker
+   Visitor Counter + Geolocation
+===================================================== */
+
+
+/* =====================================================
+   PRODUCT DETAILS MODAL
+===================================================== */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+}
+
+.product-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-modal-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(30px) scale(0.97);
+
+    transition: transform 0.3s ease;
+}
+
+.product-modal.active .product-modal-box {
+    transform: translateY(0) scale(1);
+}
+
+
+/* CLOSE BUTTON */
+
+.product-modal-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 25px;
+    line-height: 1;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+}
+
+.product-modal-close:hover {
+    background: #c49a2c;
+    transform: rotate(90deg);
+}
+
+
+/* MODAL CONTENT */
+
+.product-modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 500px;
+}
+
+
+/* MODAL IMAGE */
+
+.modal-product-image {
+    width: 100%;
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+.modal-product-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.product-modal:hover .modal-product-image img {
+    transform: scale(1.02);
+}
+
+
+/* MODAL INFORMATION */
+
+.modal-product-info {
+    padding: 60px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-brand {
+    color: #c49a2c;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.modal-product-info h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    color: #111;
+}
+
+.modal-product-info h3 {
+    color: #b28a20;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.modal-product-info > p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* MODAL DETAILS */
+
+.modal-details {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    margin-bottom: 25px;
+}
+
+.modal-details div {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.modal-details div:last-child {
+    border-bottom: none;
+}
+
+.modal-details strong {
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.modal-details span {
+    color: #777;
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+/* MODAL ADD CART */
+
+.modal-add-cart {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.modal-add-cart:hover {
+    background: #c49a2c;
+}
+
+
+/* =====================================================
+   VIEW DETAILS BUTTON
+===================================================== */
+
+.view-details {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid #c49a2c;
+
+    background: #fff;
+
+    color: #b28a20;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.view-details:hover {
+    background: #c49a2c;
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FADE IN / FADE OUT ANIMATION
+===================================================== */
+
+.fade-in {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.fade-in-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.fade-in-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.fade-in-delay-3 {
+    transition-delay: 0.3s;
+}
+
+
+/* =====================================================
+   BOTTOM CONTINUOUS TICKER
+===================================================== */
+
+.bottom-ticker {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 35px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    color: #fff;
+
+    border-top: 1px solid #c49a2c;
+
+    z-index: 99990;
+}
+
+.ticker-track {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    animation: tickerMove 25s linear infinite;
+}
+
+.ticker-track span {
+    display: block;
+
+    padding-right: 70px;
+
+    white-space: nowrap;
+
+    color: #c49a2c;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+@keyframes tickerMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =====================================================
+   VISITOR COUNTER
+===================================================== */
+
+.visitor-counter {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    background: #111;
+
+    color: #fff;
+
+    border: 1px solid #c49a2c;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.visitor-counter span {
+    color: #c49a2c;
+}
+
+
+/* =====================================================
+   GEOLOCATION
+===================================================== */
+
+.location-widget {
+    max-width: 500px;
+
+    margin: 30px auto 0;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    background: #f7f6f2;
+
+    border: 1px solid #e5e2d9;
+
+    text-align: center;
+}
+
+.location-widget span:first-child {
+    font-size: 20px;
+}
+
+#userLocation {
+    color: #555;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+#getLocation {
+    padding: 10px 16px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+#getLocation:hover {
+    background: #c49a2c;
+}
+
+
+/* =====================================================
+   CATEGORY FILTER IMPROVEMENT
+===================================================== */
+
+.filters .filter,
+.product-filters .filter {
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filters .filter:hover,
+.product-filters .filter:hover {
+    transform: translateY(-2px);
+}
+
+.filters .filter.active,
+.product-filters .filter.active {
+    background: #c49a2c;
+
+    border-color: #c49a2c;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   PRODUCT CARD FADE SUPPORT
+===================================================== */
+
+.product-card {
+    transition:
+        transform 0.3s ease,
+        opacity 0.4s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   SMOOTH BUTTON EFFECTS
+===================================================== */
+
+.btn,
+.add-cart,
+.view-details,
+.modal-add-cart,
+#getLocation,
+.contact-submit {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+
+/* Main Sitemap Wrapper */
+.velora-sitemap-page {
+    width: 100%;
+    background: #fff;
+    color: #111;
+}
+
+
+/* =====================================================
+   SITEMAP HERO
+===================================================== */
+
+.velora-sitemap-hero {
+    width: 100%;
+    padding: 90px 20px;
+    background: #111;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.velora-sitemap-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(196, 154, 44, 0.25);
+}
+
+.velora-sitemap-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.velora-sitemap-hero-content span {
+    display: block;
+    margin-bottom: 15px;
+    color: #c49a2c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.velora-sitemap-hero-content h1 {
+    margin: 0 0 15px;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.velora-sitemap-hero-content p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   SITEMAP CONTENT
+===================================================== */
+
+.velora-sitemap-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+
+/* Heading */
+
+.velora-sitemap-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.velora-sitemap-heading span {
+    display: block;
+    margin-bottom: 10px;
+    color: #c49a2c;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.velora-sitemap-heading h2 {
+    margin: 0 0 15px;
+    color: #111;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+}
+
+.velora-sitemap-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   SITEMAP GRID
+===================================================== */
+
+.velora-sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* =====================================================
+   SITEMAP CARD
+===================================================== */
+
+.velora-sitemap-card {
+    min-height: 300px;
+    padding: 35px 25px;
+    background: #f8f7f4;
+    border: 1px solid #e5e2d9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.velora-sitemap-card:hover {
+    transform: translateY(-8px);
+    border-color: #c49a2c;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Icon */
+
+.velora-sitemap-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #c49a2c;
+    font-size: 24px;
+    border: 1px solid #111;
+    transition: all 0.3s ease;
+}
+
+.velora-sitemap-card:hover .velora-sitemap-icon {
+    background: #c49a2c;
+    color: #111;
+}
+
+
+/* Card Heading */
+
+.velora-sitemap-card h3 {
+    margin: 0 0 12px;
+    color: #111;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+
+/* Card Paragraph */
+
+.velora-sitemap-card p {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Main Link */
+
+.velora-sitemap-main-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #b28a20;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.velora-sitemap-main-link:hover {
+    color: #111;
+}
+
+
+/* =====================================================
+   SUB LINKS
+===================================================== */
+
+.velora-sitemap-sub-links {
+    margin-top: 5px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.velora-sitemap-sub-links a {
+    display: block;
+    padding: 5px 0;
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.velora-sitemap-sub-links a:hover {
+    padding-left: 5px;
+    color: #c49a2c;
+}
+
+
+/* =====================================================
+   QUICK LINKS SECTION
+===================================================== */
+
+.velora-sitemap-quick {
+    margin-top: 60px;
+    padding: 40px 30px;
+    background: #111;
+    text-align: center;
+}
+
+.velora-sitemap-quick h3 {
+    margin: 0 0 25px;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.velora-sitemap-quick-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* SIDMAP */
+.velora-sitemap-quick-links a {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid #555;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.velora-sitemap-quick-links a:hover {
+    background: #c49a2c;
+    border-color: #c49a2c;
+    color: #111;
+}
+
+
+/* =====================================================
+   MODAL SCROLLBAR
+===================================================== */
+
+.product-modal-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.product-modal-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.product-modal-box::-webkit-scrollbar-thumb {
+    background: #c49a2c;
+}
+
+.product-modal-box::-webkit-scrollbar-thumb:hover {
+    background: #a77f19;
+}
+.sitemap-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sitemap-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    padding: 35px 30px;
+    min-height: 210px;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.sitemap-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .10);
+    border-color: #b08d57;
+}
+
+.sitemap-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 45px;
+    font-weight: 700;
+    color: rgba(176, 141, 87, .12);
+}
+.sitemap-card h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+.sitemap-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.sitemap-link {
+    display: inline-block;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #b08d57;
+    padding-bottom: 4px;
+    transition: .3s ease;
+}
+.sitemap-link:hover {
+    color: #b08d57;
+}
+
+.fetch-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+.fetch-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fetch-out {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* 
+Animation delay */
+
+.delay-1 {
+    transition-delay: .10s;
+}
+
+.delay-2 {
+    transition-delay: .20s;
+}
+
+.delay-3 {
+    transition-delay: .30s;
+}
+
+.delay-4 {
+    transition-delay: .40s;
+}
+
+.delay-5 {
+    transition-delay: .50s;
+}
+
+.delay-6 {
+    transition-delay: .60s;
+}
+/* Search overlay */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 650px;
+    background: #fff;
+    padding: 45px;
+    position: relative;
+}
+
+.search-box h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.search-box h2 span {
+    color: #b08d57;
+}
+
+.search-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.search-input-wrapper {
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.search-input-wrapper input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.search-input-wrapper button {
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 0 25px;
+    font-weight: 600;
+}
+
+.search-results {
+    margin-top: 20px;
+    color: #777;
+}
+
+
+/* Card overlay */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: 9997;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
 
 

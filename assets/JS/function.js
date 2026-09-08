@@ -32,6 +32,7 @@ if (menuButton && navLinks) {
 
 
 
+
 //    PRODUCT FILTER
 
 
@@ -575,6 +576,119 @@ if (checkoutButton) {
     );
 
 }
+
+
+
+
+
+/* =====================================================
+   GEOLOCATION
+===================================================== */
+
+const getLocation = document.getElementById("getLocation");
+const userLocation = document.getElementById("userLocation");
+
+if (getLocation && userLocation) {
+
+    getLocation.addEventListener("click", function () {
+
+        if (!navigator.geolocation) {
+
+            userLocation.textContent =
+                "Geolocation is not supported by your browser.";
+
+            return;
+        }
+
+        userLocation.textContent =
+            "Detecting your location...";
+
+        navigator.geolocation.getCurrentPosition(
+
+            function (position) {
+
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                userLocation.innerHTML =
+                    `Your Location: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+
+            },
+
+            function (error) {
+
+                if (error.code === error.PERMISSION_DENIED) {
+
+                    userLocation.textContent =
+                        "Location permission denied.";
+
+                } else {
+
+                    userLocation.textContent =
+                        "Unable to detect your location.";
+                }
+
+            },
+
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+
+        );
+
+    });
+
+}
+
+
+
+
+/* =====================================================
+   FADE IN ANIMATION ON SCROLL
+===================================================== */
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const fadeObserver = new IntersectionObserver(
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            } else {
+
+                entry.target.classList.remove("show");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+fadeElements.forEach(function (element) {
+
+    fadeObserver.observe(element);
+
+});
+
+
+
+
+
+
+
+
+
 //    END OF FUNCTION.JS
 
 

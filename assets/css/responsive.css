@@ -782,3 +782,724 @@
         right: -2px;
     }
 }
+
+
+
+/* =====================================================
+   VELORA WATCHES - SITEMAP RESPONSIVE CSS
+===================================================== */
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .velora-sitemap-hero {
+        padding: 75px 20px;
+    }
+
+    .velora-sitemap-hero-content h1 {
+        font-size: 44px;
+    }
+
+    .velora-sitemap-content {
+        padding: 70px 20px;
+    }
+
+    .velora-sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .velora-sitemap-hero {
+        padding: 60px 15px;
+    }
+
+    .velora-sitemap-hero-content span {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .velora-sitemap-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .velora-sitemap-hero-content p {
+        font-size: 12px;
+    }
+
+
+    .velora-sitemap-content {
+        padding: 55px 15px;
+    }
+
+
+    .velora-sitemap-heading {
+        margin-bottom: 35px;
+    }
+
+    .velora-sitemap-heading h2 {
+        font-size: 30px;
+    }
+
+    .velora-sitemap-heading p {
+        font-size: 12px;
+    }
+
+
+    .velora-sitemap-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    .velora-sitemap-card {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+
+    .velora-sitemap-quick {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+
+    .velora-sitemap-quick h3 {
+        font-size: 23px;
+    }
+
+
+    .velora-sitemap-quick-links {
+        flex-direction: column;
+    }
+
+    .velora-sitemap-quick-links a {
+        width: 100%;
+        max-width: 250px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .velora-sitemap-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .velora-sitemap-heading h2 {
+        font-size: 27px;
+    }
+
+    .velora-sitemap-card {
+        padding: 25px 18px;
+    }
+
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    /* TOP BAR */
+
+    .top-bar-content {
+        padding: 6px 5px;
+
+        gap: 2px 4px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.15px;
+
+        line-height: 1.4;
+    }
+
+    .top-time {
+        margin-left: 2px;
+
+        padding-left: 5px;
+
+        font-size: 7px;
+    }
+
+
+    /* HERO */
+
+    .hero h1,
+    .products-hero h1,
+    .technology-hero h1,
+    .about-hero h1,
+    .gallery-hero h1 {
+        font-size: 31px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+}
+
+
+/* =====================================================
+   SEARCH OVERLAY
+===================================================== */
+
+.search-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 120px;
+
+    background: rgba(0, 0, 0, 0.70);
+
+    z-index: 99999;
+}
+
+.search-overlay.active {
+    display: flex;
+}
+
+.search-box {
+    position: relative;
+
+    width: 90%;
+    max-width: 650px;
+
+    padding: 40px;
+
+    background: #fff;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+}
+
+.search-box h2 {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+}
+
+.search-box h2 span {
+    color: #c49a2c;
+}
+
+.search-close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #111;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.search-input-wrapper {
+    display: flex;
+
+    width: 100%;
+}
+
+.search-input-wrapper input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #111;
+}
+
+.search-input-wrapper input:focus {
+    border-color: #c49a2c;
+}
+
+.search-input-wrapper button {
+    padding: 0 25px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.search-input-wrapper button:hover {
+    background: #c49a2c;
+}
+
+.search-results {
+    min-height: 22px;
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+.search-results strong {
+    color: #c49a2c;
+}
+
+
+@media (max-width: 600px) {
+
+    .search-overlay {
+        padding-top: 80px;
+    }
+
+    .search-box {
+        width: 94%;
+
+        padding: 32px 20px 25px;
+    }
+
+    .search-box h2 {
+        font-size: 24px;
+    }
+
+    .search-input-wrapper {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .search-input-wrapper button {
+        min-height: 45px;
+    }
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-hero {
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 8%;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-hero-content h1 {
+    font-size: 52px;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 1px;
+}
+
+.contact-hero-content p {
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+/* CONTACT MAIN */
+
+.contact-page {
+    padding: 80px 7%;
+
+    background: #fff;
+}
+
+.contact-main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+
+/* CONTACT INFO */
+
+.contact-info-box h2 {
+    font-size: 34px;
+
+    margin-bottom: 18px;
+
+    color: #111;
+}
+
+.contact-info-box > p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.contact-detail {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.contact-detail-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f2e7;
+
+    color: #c49a2c;
+
+    font-size: 20px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.contact-detail h4 {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+
+    color: #111;
+}
+
+.contact-detail p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form-box {
+    background: #fafafa;
+
+    padding: 40px;
+
+    border: 1px solid #eee;
+}
+
+.contact-form-box h2 {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+    color: #111;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+.contact-form input {
+    height: 50px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c49a2c;
+}
+
+.contact-submit {
+    width: fit-content;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.contact-submit:hover {
+    background: #c49a2c;
+}
+
+
+/* LOCATION / MAP */
+
+.contact-location {
+    max-width: 1200px;
+
+    margin: 70px auto 0;
+}
+
+.location-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.location-heading h2 {
+    font-size: 34px;
+
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+.location-heading p {
+    color: #666;
+}
+
+.location-map {
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee;
+}
+
+.location-map iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* CONTACT RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .contact-hero {
+        min-height: 350px;
+
+        padding: 60px 6%;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-page {
+        padding: 60px 6%;
+    }
+
+    .contact-form-box {
+        padding: 30px;
+    }
+
+    .location-map {
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .contact-hero-content p {
+        font-size: 15px;
+    }
+
+    .contact-info-box h2 {
+        font-size: 28px;
+    }
+
+    .contact-form-box h2 {
+        font-size: 25px;
+    }
+
+    .location-heading h2 {
+        font-size: 28px;
+    }
+
+    .location-map {
+        height: 280px;
+    }
+}
+
+
+/* Sitemap */
+/* Tablet */
+@media (max-width: 900px) {
+
+    .sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sitemap-page {
+        padding: 55px 20px;
+    }
+
+    .sitemap-header h1 {
+        font-size: 32px;
+    }
+
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sitemap-card {
+        padding: 30px 25px;
+    }
+
+    .search-box {
+        padding: 30px 20px;
+    }
+
+    .search-input-wrapper {
+        flex-direction: column;
+    }
+
+    .search-input-wrapper button {
+        padding: 13px;
+    }
+
+    .cart {
+        width: 90%;
+    }
+
+    .bottom-ticker {
+        padding: 11px 0;
+    }
+
+    .ticker-track {
+        animation-duration: 18s;
+    }
+
+    .ticker-track span {
+        margin-right: 45px;
+        font-size: 10px;
+    }
+
+}
